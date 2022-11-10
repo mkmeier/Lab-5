@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise 4</title>
+    </head>
+    <body>
+        <p id="myP" style="color: red; border-style: solid; border-color: red">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h5 id="myH5">#FF0000</h5>
+        <button type="button" onclick="rbg()">Change Color</button>
+
+        <script>
+            function rbg()
+            {
+                console.log(document.getElementById("myP").style.color)
+                switch (document.getElementById("myP").style.color) {
+                case "red":
+                    document.getElementById("myP").style.borderColor = "green";
+                    document.getElementById("myP").style.color = "green";
+                    document.getElementById("myH5").innerHTML = "#008000";
+                    break;
+                case "green":
+                    document.getElementById("myP").style.borderColor = "blue";
+                    document.getElementById("myP").style.color = "blue";
+                    document.getElementById("myH5").innerHTML = "#0000FF";
+                    break;
+                case "blue":
+                    document.getElementById("myP").style.borderColor = "red";
+                    document.getElementById("myP").style.color = "red";
+                    document.getElementById("myH5").innerHTML = "#FF0000";
+                    break;
+                }
+              
+            }
+
+        </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Exercise 1</title>
+
+	</head>
+	<body>
+		<label for="pwd">Password:</label>
+		<input type="password" id="pwd" name="pwd">
+		</br>
+		<label for="pwd2">Please retype the password:</label>
+		<input type="password" id="pwd2" name="pwd2">
+		</br>
+		<button onclick="verify()">Verify</button>
+		<p id="match"></p>
+		<p id="length"></p>
+
+		<script>
+			function verify()
+			{
+				var pwd = document.getElementById("pwd").value;
+                var pwd2 = document.getElementById("pwd2").value;
+	
+
+				console.log(pwd);
+				console.log(pwd2);
+				if(pwd == pwd2)
+				{
+					document.getElementById("match").innerHTML = "The passwords match\n";
+				}
+				else
+				document.getElementById("match").innerHTML = "The passwords need to match\n";				
+				
+				if(pwd.length >= 8)
+				{
+					document.getElementById("length").innerHTML = "Password is a good length\n";
+				}
+				else
+				document.getElementById("length").innerHTML = "Password must be longer than 8 characters\n";
+
+			}
+
+
+		</script>
+	</body>
+
+
+</html>
